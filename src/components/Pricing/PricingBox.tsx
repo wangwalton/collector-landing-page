@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { ChromeLogo, InstallChromeExtension } from "../InstallChromeExtension";
+
 const PricingBox = (props: {
   price: string;
   duration: string;
@@ -22,11 +25,19 @@ const PricingBox = (props: {
           </h4>
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            Start Free Trial
-          </button>
+        <div className="mb-8  border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
+          <Link
+            target="_blank"
+            href="https://chromewebstore.google.com/detail/collector-export-any-page/lgjnjoofflpfmgkhcokddabkaeegheaj"
+            className="flex items-center space-x-2 rounded-md bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+          >
+            <div style={{ marginRight: 10 }}>
+              <ChromeLogo />
+            </div>
+            Install Chrome Extension
+          </Link>
         </div>
+
         <div>{children}</div>
         <div className="absolute bottom-0 right-0 z-[-1]">
           <svg

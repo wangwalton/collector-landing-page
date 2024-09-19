@@ -9,11 +9,13 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
+import EmailCopy from "@/components/EmailCopy";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Collector",
+  icons: "/images/favicon.png",
+  description: "Collector - AI web scraping for non-developers",
   // other metadata
 };
 
@@ -24,13 +26,14 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* <Brands /> */}
+      {/* <AboutSectionOne />
+      <AboutSectionTwo /> */}
       <Testimonials />
       <Pricing />
-      <Blog />
-      <Contact />
+      {/* <Blog /> */}
+      {/* <EmailCopy /> */}
+      {/* <Contact /> */}
     </>
   );
 }
