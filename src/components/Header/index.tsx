@@ -115,6 +115,7 @@ const Header = () => {
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                             }`}
+                            prefetch={menuItem.prefetch}
                           >
                             {menuItem.title}
                           </Link>
@@ -146,6 +147,7 @@ const Header = () => {
                                   href={submenuItem.path}
                                   key={index}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  prefetch={submenuItem.prefetch}
                                 >
                                   {submenuItem.title}
                                 </Link>
