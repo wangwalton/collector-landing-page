@@ -1,3 +1,4 @@
+import PageVisitTracker from "@/components/PageVisitTracker";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
