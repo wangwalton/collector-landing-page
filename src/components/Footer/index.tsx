@@ -27,7 +27,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Any questions? Email me at yuwaltonwang@gmail.com
+                  Any questions? Email us at support@collector-ai.com
                 </p>
                 {/* <div className="flex items-center">
                   <a

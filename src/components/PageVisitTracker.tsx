@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 import Cookies from "js-cookie";
 
@@ -16,6 +16,8 @@ if (!userId) {
 
 export default function PageVisitTracker() {
   const pathname = usePathname(); // Reflects the current path of the page
+  const searchParams = useSearchParams();
+  const referrer = searchParams.get("referrer");
 
   useEffect(() => {
     // Trigger the API call when the component mounts or the pathname changes
@@ -26,7 +28,7 @@ export default function PageVisitTracker() {
           body: JSON.stringify({
             url: pathname,
             userId,
-            referer: document.referrer,
+            referer: referrer || document.referrer,
           }),
           headers: {
             "Content-Type": "application/json",
