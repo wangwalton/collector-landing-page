@@ -24,7 +24,9 @@ export default function RootLayout({
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
-          <PageVisitTracker />
+          <Suspense>
+            <PageVisitTracker />
+          </Suspense>
           <Header />
           {children}
           <Footer />
@@ -37,3 +39,4 @@ export default function RootLayout({
 
 import { Providers } from "./providers";
 import PageVisitTracker from "@/components/PageVisitTracker";
+import { Suspense } from "react";
