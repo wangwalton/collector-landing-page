@@ -11,7 +11,11 @@ let userId = Cookies.get("landingPageUserId");
 
 if (!userId) {
   userId = uuidv4();
-  Cookies.set("landingPageUserId", userId, { expires: 365 * 10 });
+  Cookies.set("landingPageUserId", userId, {
+    expires: 365 * 10,
+    domain:
+      process.env.NODE_ENV === "production" ? ".collector-ai.com" : "localhost",
+  });
 }
 
 export default function PageVisitTracker() {
