@@ -572,7 +572,7 @@ AIGeneratedPages.forEach((page) => {
   };
 });
 
-const menuData: Menu[] = [
+export const menuData: Menu[] = [
   {
     id: 1,
     title: "Home",
@@ -603,4 +603,3 @@ const menuData: Menu[] = [
     ],
   },
 ];
-export default menuData;
